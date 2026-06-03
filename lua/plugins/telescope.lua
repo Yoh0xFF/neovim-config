@@ -4,6 +4,7 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+      "nvim-telescope/telescope-file-browser.nvim",
     },
     config = function()
       local telescope = require("telescope")
@@ -17,6 +18,7 @@ return {
         },
       })
       telescope.load_extension("fzf")
+      telescope.load_extension("file_browser")
 
       local map = vim.keymap.set
       local b = require("telescope.builtin")
@@ -27,6 +29,7 @@ return {
       map("n", "<leader>fd", b.diagnostics, { desc = "Find diagnostics" })
       map("n", "<leader>fr", b.oldfiles,    { desc = "Recent files" })
       map("n", "<leader><leader>", b.oldfiles, { desc = "Recent files" })
+      map("n", "<leader>fe", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", { desc = "File browser" })
     end,
   },
 }
