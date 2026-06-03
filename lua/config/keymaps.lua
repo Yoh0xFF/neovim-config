@@ -46,14 +46,5 @@ map("n", "<leader>to", "<cmd>tabonly<cr>",  { desc = "Close other tabs" })
 map("n", "<Tab>",      "<cmd>tabnext<cr>",  { desc = "Next tab" })
 map("n", "<S-Tab>",    "<cmd>tabprev<cr>",  { desc = "Prev tab" })
 
--- Formatting
-map("n", "<leader>cf", function() require("conform").format({ async = true }) end, { desc = "Format buffer" })
-
--- Diagnostics
-map("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
-map("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev diagnostic" })
-map("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic" })
-map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostics list" })
-
 -- Consistency: Y yanks to end of line (like D and C)
 map("n", "Y", "y$", { desc = "Yank to end of line" })

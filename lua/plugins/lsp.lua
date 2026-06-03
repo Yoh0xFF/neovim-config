@@ -8,6 +8,12 @@ return {
       "saghen/blink.cmp",
     },
     config = function()
+      local map = vim.keymap.set
+      map("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+      map("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev diagnostic" })
+      map("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic" })
+      map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostics list" })
+
       local on_attach = function(_, bufnr)
         local map = function(keys, func, desc)
           vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
