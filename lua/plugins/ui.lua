@@ -17,4 +17,12 @@ return {
     event = "InsertEnter",
     opts = {},
   },
+
+  -- Keymap popup: shows available keybindings when you pause after a prefix
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
+
 }
