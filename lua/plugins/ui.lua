@@ -5,9 +5,9 @@ return {
   -- Statusline
   {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons", "catppuccin/nvim" },
+    dependencies = { "nvim-tree/nvim-web-devicons", "Mofiqul/dracula.nvim" },
     opts = {
-      options = { theme = "catppuccin-mocha" },
+      options = { theme = "dracula" },
     },
   },
 

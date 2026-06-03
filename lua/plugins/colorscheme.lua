@@ -2,10 +2,15 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    lazy = true,
+  },
+
+  {
+    "Mofiqul/dracula.nvim",
     lazy = false,
-    priority = 1000, -- load before all other plugins
+    priority = 1000,
     config = function()
-      vim.cmd.colorscheme("catppuccin")
+      vim.cmd.colorscheme("dracula")
     end,
   },
 }
