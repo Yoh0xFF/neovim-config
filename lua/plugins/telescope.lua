@@ -9,6 +9,7 @@ return {
       local telescope = require("telescope")
       telescope.setup({
         defaults = {
+          initial_mode = "normal",
           file_ignore_patterns = {
             "node_modules/", "%.git/", "dist/", "build/", "%.next/",
             "target/", "%.cache/", "%.DS_Store",
