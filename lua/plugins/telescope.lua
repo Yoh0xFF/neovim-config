@@ -30,6 +30,7 @@ return {
       map("n", "<leader>fr", b.oldfiles,    { desc = "Recent files" })
       map("n", "<leader><leader>", b.oldfiles, { desc = "Recent files" })
       map("n", "<leader>fe", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", { desc = "File browser" })
+      map("n", "<leader>fs", b.lsp_document_symbols, { desc = "File symbols" })
     end,
   },
 }
