@@ -11,6 +11,9 @@ return {
       -- https://github.com/stevearc/conform.nvim#formatters
       formatters_by_ft = {
         lua = { "stylua" },
+        json = { "jq" },
+        jsonc = { "jq" },
+        xml = { "xmllint" },
       },
     },
   },
