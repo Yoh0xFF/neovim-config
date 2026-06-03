@@ -9,6 +9,8 @@ map("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 -- Buffer navigation
 map("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Prev buffer" })
 map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+map("n", "<leader>bn", "<cmd>enew<cr>",    { desc = "New buffer" })
+map("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Close buffer" })
 
 -- Window resizing
 map("n", "<C-Up>",    "<cmd>resize +2<cr>",          { desc = "Increase window height" })
