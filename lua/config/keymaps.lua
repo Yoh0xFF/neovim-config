@@ -46,5 +46,9 @@ map("n", "<leader>to", "<cmd>tabonly<cr>",  { desc = "Close other tabs" })
 map("n", "<Tab>",      "<cmd>tabnext<cr>",  { desc = "Next tab" })
 map("n", "<S-Tab>",    "<cmd>tabprev<cr>",  { desc = "Prev tab" })
 
+-- Search and replace
+map("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]], { desc = "Replace word under cursor" })
+map("v", "<leader>sr", [["zy:%s/\V<C-r>z//g<Left><Left>]],          { desc = "Replace selection" })
+
 -- Consistency: Y yanks to end of line (like D and C)
 map("n", "Y", "y$", { desc = "Yank to end of line" })
